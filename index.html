@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title> Variable + Function Lab </title>
+
+        <script>
+
+            //Exercise 1  - The Fortune Teller
+            let job = 'Doctor';
+            let geo = 'Toronto';
+            let salary = 90000;
+            let company = 'ABC Medical';
+            console.log("You will be a " + job + " in " + geo + ", making $" + salary + " for " + company);
+
+            //Exercise 2 = The Age Calculator
+            let currentYear = 2020;
+            let birthYear = 1999;
+            let age = currentYear - birthYear;
+            console.log("They are " + age + " years old.");
+
+            //Exercise 3 - The Lifetime Supply Calculator
+            let currentAge = 21;
+            let maxAge = 90;
+            let estimatedAmt = 4;
+            let time = maxAge - currentAge; 
+            let supply = time * estimatedAmt;
+            console.log("You will need " + supply + " to last you until the ripe old age of " + maxAge);
+
+            //Exercise 4 - The Geometrizer
+            let rad = 5;
+            let pi = 3.14159265359;
+            let circ = 2*pi*rad;
+            let area = pi*(rad*rad);
+            console.log("The circumference is " + circ);
+            console.log("The area is " + area);
+
+            //Exercise 5 - The Temperature Converter
+            let cels = 32;
+            let far = 101;
+            let convF = (cels*1.8) + 32;
+            let convC = (far - 32)*(5/9);
+            console.log(cels + "°C is " + convF + "°F");
+            console.log(far + "°F is " + convC + "°C");
+
+
+
+
+
+             //EXERCISE 1
+             function squareNumber(a) {
+                let result;
+                result = a*a;
+                console.log("The result of squaring the number " + a + "  is " + result);
+                return result;
+            }
+            //EXERCISE 2
+            function halfNumber(a) {
+                let result;
+                result = a/2;
+                console.log("Half of " + a + " is " + result);
+                return result;
+            }
+            //EXERCISE 3
+            function percentOf(a,b) {
+                let result;
+                result = a/b * 100;
+                console.log(a + " is " + result + "% of " + b);
+                return result;
+            }
+            //EXERCISE 4
+            function areaOfCircle (rad) {
+                let pi = 3.14159265359;
+                let result;
+                result = pi*(Math.pow(rad,2));
+                console.log("The area for a circle with radius " + rad + " is " + Math.round(result * 100)/100);
+                return result;
+            }
+            //EXERCISE 5
+            function runAll(num){
+                let halfNum = num/2;
+                
+                let sqNum = squareNumber(halfNum);
+                
+                let areaNum = areaOfCircle(sqNum);
+                
+                let percNum = percentOf(sqNum, areaNum);
+                
+            }
+
+            let a = 4;
+            let b = 4;
+            let rad = 4;
+            let num = 10;
+            squareNumber(a);
+            halfNumber(a);
+            percentOf(a,b);
+            areaOfCircle(rad);
+            runAll(num);
+
+        </script>
+    </head>
+</html>
